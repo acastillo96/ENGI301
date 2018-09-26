@@ -51,7 +51,10 @@ Error conditions:
 
 --------------------------------------------------------------------------
 """
+from __future__ import print_function
 import operator
+
+import sys
 
 # ------------------------------------------------------------------------
 # Constants
@@ -66,6 +69,10 @@ operators = {
        "-" : operator.sub,
        "*" : operator.mul,
        "/" : operator.truediv,
+       "<<" : operator.lshift,
+       ">>" : operator.rshift,
+       "^" : operator.pow,
+       "%" : operator.mod,
 }
 
 
@@ -75,14 +82,13 @@ operators = {
 
 def get_user_input():
     try:
-        number1 = float(input("Enter the first number: "))
-        number2 = float(input("Enter the second number: "))
-        op      = input("Enter an operator (valid operators are +,-,*, and /): ")
+        number1 = int(get_input("Enter the first number: "))
+        number2 = int(get_input("Enter the second number: "))
+        op      = get_input("Enter an operator (valid operators are +,-,*, ^, %, >>, << and /): ")
     
         return (number1, number2, op)
     
     except:
-        print ("Invalid Input!")
         return (None, None, None)
 
 # ------------------------------------------------------------------------
@@ -91,13 +97,21 @@ def get_user_input():
 
 if __name__ == "__main__":  
     
+    # Support Python 2 and 3 input
+    # Default to Python 3's input()
+    get_input = input
+
+    # If this is Python 2, use raw_input()
+    if sys.version_info[:2] <= (2, 7):
+        get_input = raw_input
+    
     while True:
         (number1, number2, op) = get_user_input()
-    
+            
         func = operators.get(op, None)
         
         if (number1 is None) or (number2 is None) or (func is None):
-            
+            print ("Invalid Input!")
             print ("Quitting")
             break
         else:
