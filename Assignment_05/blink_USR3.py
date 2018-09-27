@@ -42,7 +42,9 @@ t=30
 
 while t>0:
     GPIO.output("USR%d" % 3, GPIO.HIGH)
-    time.sleep(0.2)
+    time.sleep(0.1)
+    GPIO.output("USR%d" % 3, GPIO.LOW)
+    time.sleep(0.1)
     t = t-1
 
 GPIO.output("USR%d" % 3, GPIO.LOW)
