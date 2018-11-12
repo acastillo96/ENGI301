@@ -1,4 +1,4 @@
-#Coffee Heater Project
+#Coffee Heater Project <br />
 This are all the files used in the Coffee Heater Project. The files included are: <br />
 *Device tree for the thermistor <br />
 *Python Code <br />
