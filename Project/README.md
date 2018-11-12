@@ -4,4 +4,4 @@ This are all the files used in the Coffee Heater Project. The files included are
 *Python Code <br />
 *Library to use the Hex Display <br />
 *Project Proposal file <br />
-*Fritzing diagram of the device √
+*Fritzing diagram of the device
