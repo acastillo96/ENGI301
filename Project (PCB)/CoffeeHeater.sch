@@ -3379,7 +3379,7 @@ Vishay IHLP
 <sheet>
 <plain>
 <text x="314.96" y="20.32" size="2.54" layer="94">ENGI301 - PCB Project</text>
-<text x="233.68" y="241.3" size="3.81" layer="97">Temperature Display</text>
+<text x="210.82" y="246.38" size="3.81" layer="97">Temperature Display</text>
 <wire x1="210.82" y1="185.42" x2="210.82" y2="109.22" width="0.1524" layer="97"/>
 <wire x1="297.18" y1="185.42" x2="297.18" y2="109.22" width="0.1524" layer="97"/>
 <wire x1="142.24" y1="190.5" x2="375.92" y2="190.5" width="0.1524" layer="97"/>
@@ -3388,9 +3388,11 @@ Vishay IHLP
 <text x="304.8" y="182.88" size="3.81" layer="97">Heating Pad</text>
 <text x="66.04" y="246.38" size="3.81" layer="97">PocketBeagle</text>
 <text x="22.86" y="83.82" size="3.81" layer="97">Temperature Selector</text>
-<wire x1="137.16" y1="266.7" x2="137.16" y2="20.32" width="0.1524" layer="97"/>
+<wire x1="137.16" y1="254" x2="137.16" y2="7.62" width="0.1524" layer="97"/>
 <wire x1="142.24" y1="104.14" x2="378.46" y2="104.14" width="0.1524" layer="97"/>
 <text x="144.78" y="96.52" size="3.81" layer="97">Voltage Regulator</text>
+<wire x1="297.18" y1="251.46" x2="297.18" y2="195.58" width="0.1524" layer="97"/>
+<text x="304.8" y="246.38" size="3.81" layer="97">Battery Input</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0">
@@ -3579,12 +3581,12 @@ Vishay IHLP
 <instance part="U$17" gate="G$1" x="325.12" y="30.48">
 <attribute name="VALUE" x="323.596" y="27.94" size="1.27" layer="96"/>
 </instance>
-<instance part="X1" gate="G$1" x="342.9" y="88.9" rot="R180">
-<attribute name="VALUE" x="345.44" y="93.98" size="1.27" layer="96" rot="R180"/>
-<attribute name="NAME" x="345.44" y="81.28" size="1.27" layer="95" rot="R180"/>
+<instance part="X1" gate="G$1" x="330.2" y="220.98" rot="R180">
+<attribute name="VALUE" x="332.74" y="226.06" size="1.27" layer="96" rot="R180"/>
+<attribute name="NAME" x="332.74" y="213.36" size="1.27" layer="95" rot="R180"/>
 </instance>
-<instance part="U$19" gate="G$1" x="347.98" y="81.28">
-<attribute name="VALUE" x="346.456" y="78.74" size="1.27" layer="96"/>
+<instance part="U$19" gate="G$1" x="335.28" y="213.36">
+<attribute name="VALUE" x="333.756" y="210.82" size="1.27" layer="96"/>
 </instance>
 <instance part="Q1" gate="G$1" x="322.58" y="40.64">
 <attribute name="NAME" x="327.66" y="41.275" size="1.27" layer="95"/>
@@ -3783,7 +3785,7 @@ Vishay IHLP
 </segment>
 <segment>
 <pinref part="U$19" gate="G$1" pin="GND"/>
-<wire x1="347.98" y1="86.36" x2="347.98" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="218.44" x2="335.28" y2="215.9" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -4074,8 +4076,8 @@ Vishay IHLP
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="2"/>
-<wire x1="347.98" y1="88.9" x2="347.98" y2="96.52" width="0.1524" layer="91"/>
-<label x="350.52" y="91.44" size="1.778" layer="95" rot="R90"/>
+<wire x1="335.28" y1="220.98" x2="335.28" y2="228.6" width="0.1524" layer="91"/>
+<label x="337.82" y="223.52" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="C"/>
