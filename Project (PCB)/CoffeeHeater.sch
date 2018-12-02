@@ -3478,9 +3478,9 @@ Vishay IHLP
 <attribute name="VALUE" x="187.96" y="176.784" size="1.778" layer="96" align="center"/>
 </instance>
 <instance part="U$3" gate="G$1" x="323.215" y="144.145"/>
-<instance part="U$4" gate="G$1" x="345.44" y="121.92" rot="R90">
-<attribute name="NAME" x="342.9" y="119.38" size="1.778" layer="95" rot="R90" display="off"/>
-<attribute name="VALUE" x="342.9" y="116.84" size="1.778" layer="96" rot="R90"/>
+<instance part="U$4" gate="G$1" x="345.44" y="124.46" rot="R270">
+<attribute name="NAME" x="347.98" y="127" size="1.778" layer="95" rot="R270" display="off"/>
+<attribute name="VALUE" x="347.98" y="129.54" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="GND4" gate="1" x="345.44" y="109.22">
 <attribute name="VALUE" x="342.9" y="106.68" size="1.778" layer="96"/>
@@ -3722,11 +3722,6 @@ Vishay IHLP
 <wire x1="163.83" y1="167.64" x2="163.83" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="1"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="345.44" y1="116.84" x2="345.44" y2="111.76" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U3" gate="G$1" pin="GND"/>
 <pinref part="U$5" gate="G$1" pin="GND"/>
 <wire x1="226.06" y1="63.5" x2="223.52" y2="63.5" width="0.1524" layer="91"/>
@@ -3797,6 +3792,11 @@ Vishay IHLP
 <pinref part="R10" gate="G$1" pin="2"/>
 <pinref part="U$28" gate="G$1" pin="GND"/>
 <wire x1="218.44" y1="25.4" x2="218.44" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="2"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="345.44" y1="119.38" x2="345.44" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="I2C_SDA" class="0">
@@ -3891,13 +3891,6 @@ Vishay IHLP
 <pinref part="U1" gate="G$1" pin="GPIO44"/>
 <wire x1="104.14" y1="157.48" x2="121.92" y2="157.48" width="0.1524" layer="91"/>
 <label x="114.3" y="157.48" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="E"/>
-<pinref part="U$4" gate="G$1" pin="2"/>
-<wire x1="345.44" y1="133.985" x2="345.44" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TEMP" class="0">
@@ -4083,6 +4076,13 @@ Vishay IHLP
 <pinref part="U$2" gate="G$1" pin="C"/>
 <wire x1="345.44" y1="154.305" x2="345.44" y2="163.83" width="0.1524" layer="91"/>
 <label x="344.17" y="156.21" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="E"/>
+<pinref part="U$4" gate="G$1" pin="1"/>
+<wire x1="345.44" y1="133.985" x2="345.44" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
