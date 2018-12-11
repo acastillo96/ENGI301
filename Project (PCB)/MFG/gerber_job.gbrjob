@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2018-12-11T08:11:57Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.2.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "CoffeeHeater"
+        },
+        "Owner": "Aec11 Aec11 <aec11@rice.edu>",
+        "Size": {
+            "X": 152.4,
+            "Y": 97.028
+        }
+    }
+}

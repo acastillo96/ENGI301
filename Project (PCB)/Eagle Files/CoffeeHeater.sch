@@ -977,16 +977,16 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="5.08" y1="1.27" x2="5.08" y2="-2.54" width="0.127" layer="21"/>
 </package>
 <package name="TIP32C_TRANSISTOR">
-<pad name="B" x="-3.81" y="0" drill="0.6" shape="long"/>
-<pad name="C" x="0" y="0" drill="0.6" shape="long"/>
-<pad name="E" x="3.81" y="0" drill="0.6" shape="long"/>
-<wire x1="-6.35" y1="1.27" x2="-6.35" y2="-1.778" width="0.127" layer="21"/>
-<wire x1="6.35" y1="-1.778" x2="6.35" y2="1.27" width="0.127" layer="21"/>
-<wire x1="6.35" y1="1.27" x2="-6.35" y2="1.27" width="0.127" layer="21"/>
-<text x="-4.064" y="-1.27" size="0.6096" layer="21">1</text>
-<text x="-0.254" y="-1.27" size="0.6096" layer="21">2</text>
-<text x="3.81" y="-1.27" size="0.6096" layer="21">3</text>
-<wire x1="-6.35" y1="-1.778" x2="6.35" y2="-1.778" width="0.127" layer="21"/>
+<pad name="B" x="-2.54" y="0" drill="0.9"/>
+<pad name="C" x="0" y="0" drill="0.9"/>
+<pad name="E" x="2.54" y="0" drill="0.9"/>
+<text x="-2.032" y="-1.27" size="0.6096" layer="21">1</text>
+<text x="0.508" y="-1.27" size="0.6096" layer="21">2</text>
+<text x="3.302" y="-1.27" size="0.6096" layer="21">3</text>
+<wire x1="-5.842" y1="-1.778" x2="5.842" y2="-1.778" width="0.127" layer="21"/>
+<wire x1="-5.842" y1="1.27" x2="-5.842" y2="-1.778" width="0.127" layer="21"/>
+<wire x1="5.842" y1="-1.778" x2="5.842" y2="1.27" width="0.127" layer="21"/>
+<wire x1="5.842" y1="1.27" x2="-5.842" y2="1.27" width="0.127" layer="21"/>
 </package>
 <package name="DIODE">
 <smd name="OUT" x="0.75" y="0" dx="0.8" dy="0.8" layer="1"/>
@@ -1098,7 +1098,7 @@ DIN A3, landscape with location and doc. field</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="DIODE">
+<deviceset name="DIODE" prefix="D">
 <gates>
 <gate name="G$1" symbol="DIODE" x="0" y="0"/>
 </gates>
@@ -3588,7 +3588,7 @@ chip</description>
 <part name="U$2" library="CoffeeHeater" deviceset="TIP32C_TRANSISTOR" device=""/>
 <part name="GND3" library="ENGI301" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="ENGI301" deviceset="VDD_5V" device=""/>
-<part name="U$3" library="CoffeeHeater" deviceset="DIODE" device=""/>
+<part name="D2" library="CoffeeHeater" deviceset="DIODE" device=""/>
 <part name="U$4" library="CoffeeHeater" deviceset="HEATING_PAD" device=""/>
 <part name="GND4" library="ENGI301" deviceset="GND" device=""/>
 <part name="R4" library="ENGI301" deviceset="R_" device="R0603" value="2.2k"/>
@@ -3740,7 +3740,7 @@ chip</description>
 <instance part="SUPPLY7" gate="G$1" x="187.96" y="172.72">
 <attribute name="VALUE" x="187.96" y="176.784" size="1.778" layer="96" align="center"/>
 </instance>
-<instance part="U$3" gate="G$1" x="323.215" y="144.145"/>
+<instance part="D2" gate="G$1" x="323.215" y="144.145"/>
 <instance part="U$4" gate="G$1" x="345.44" y="124.46" rot="R270">
 <attribute name="NAME" x="347.98" y="127" size="1.778" layer="95" rot="R270" display="off"/>
 <attribute name="VALUE" x="347.98" y="129.54" size="1.778" layer="96" rot="R270"/>
@@ -4096,8 +4096,12 @@ chip</description>
 <net name="I2C_SDA" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="SDA"/>
-<wire x1="205.74" y1="213.36" x2="154.94" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="213.36" x2="175.26" y2="213.36" width="0.1524" layer="91"/>
 <label x="152.4" y="213.36" size="1.778" layer="95"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="213.36" x2="154.94" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="223.52" x2="175.26" y2="213.36" width="0.1524" layer="91"/>
+<junction x="175.26" y="213.36"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="I2C2.SDA"/>
@@ -4108,15 +4112,11 @@ chip</description>
 <net name="I2C_SCL" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="SCL"/>
-<wire x1="205.74" y1="218.44" x2="175.26" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="218.44" x2="165.1" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="218.44" x2="165.1" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="218.44" x2="154.94" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="223.52" x2="165.1" y2="218.44" width="0.1524" layer="91"/>
 <junction x="165.1" y="218.44"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="223.52" x2="175.26" y2="218.44" width="0.1524" layer="91"/>
-<junction x="175.26" y="218.44"/>
 <label x="152.4" y="218.44" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -4170,14 +4170,14 @@ chip</description>
 </net>
 <net name="BASE" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="OUT"/>
+<pinref part="D2" gate="G$1" pin="OUT"/>
 <pinref part="U$2" gate="G$1" pin="B"/>
 <wire x1="332.105" y1="144.145" x2="335.28" y2="144.145" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HEAT_CONTROL" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="IN"/>
+<pinref part="D2" gate="G$1" pin="IN"/>
 <wire x1="318.135" y1="144.145" x2="300.355" y2="144.145" width="0.1524" layer="91"/>
 <label x="299.72" y="144.78" size="1.778" layer="95"/>
 </segment>
