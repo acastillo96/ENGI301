@@ -977,13 +977,13 @@ design rules under a new name.</description>
 <attribute name="NAME" x="58.42" y="38.862" size="1.27" layer="26" ratio="10" rot="MR0"/>
 <attribute name="VALUE" x="58.42" y="9.652" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="U$1" library="CoffeeHeater" package="DS18B20_TEMP_SENSOR" value="DS18B20_TEMP_SENSOR" x="77.47" y="78.74"/>
-<element name="U$2" library="CoffeeHeater" package="TIP32C_TRANSISTOR" value="TIP32C_TRANSISTOR" x="121.92" y="34.29"/>
+<element name="T1" library="CoffeeHeater" package="DS18B20_TEMP_SENSOR" value="DS18B20_TEMP_SENSOR" x="77.47" y="78.74"/>
+<element name="TR1" library="CoffeeHeater" package="TIP32C_TRANSISTOR" value="TIP32C_TRANSISTOR" x="121.92" y="34.29"/>
 <element name="D2" library="CoffeeHeater" package="DIODE" value="DIODE" x="104.648" y="34.29">
 <attribute name="NAME" x="103.378" y="35.306" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="103.378" y="32.512" size="0.8128" layer="27"/>
 </element>
-<element name="U$4" library="CoffeeHeater" package="HEATING_PAD" value="HEATING_PAD" x="124.46" y="13.97"/>
+<element name="H1" library="CoffeeHeater" package="HEATING_PAD" value="HEATING_PAD" x="124.46" y="13.97"/>
 <element name="R4" library="ENGI301" package="R0603" value="2.2k" x="69.723" y="87.757" rot="MR0">
 <attribute name="NAME" x="70.739" y="88.773" size="0.8128" layer="26" rot="MR0"/>
 </element>
@@ -1075,7 +1075,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="49"/>
 <contactref element="U2" pad="VCC"/>
 <contactref element="R4" pad="1"/>
-<contactref element="U$1" pad="VDD"/>
+<contactref element="T1" pad="VDD"/>
 <polygon width="0.254" layer="16">
 <vertex x="44.069" y="68.834"/>
 <vertex x="44.069" y="64.008"/>
@@ -1137,7 +1137,7 @@ design rules under a new name.</description>
 <contactref element="BLUE" pad="P$2"/>
 <contactref element="GREEN" pad="P$2"/>
 <contactref element="RED" pad="P$2"/>
-<contactref element="U$1" pad="GND"/>
+<contactref element="T1" pad="GND"/>
 <contactref element="U3" pad="7"/>
 <contactref element="U3" pad="THERMAL@7"/>
 <contactref element="U3" pad="THERMAL@11"/>
@@ -1168,7 +1168,7 @@ design rules under a new name.</description>
 <vertex x="154.94" y="-2.54"/>
 <vertex x="154.94" y="104.14"/>
 </polygon>
-<contactref element="U$4" pad="GND"/>
+<contactref element="H1" pad="GND"/>
 <via x="105.029" y="84.836" extent="1-16" drill="0.35"/>
 <via x="105.029" y="81.407" extent="1-16" drill="0.35"/>
 <via x="105.029" y="78.359" extent="1-16" drill="0.35"/>
@@ -1303,7 +1303,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="BASE">
 <contactref element="D2" pad="OUT"/>
-<contactref element="U$2" pad="B"/>
+<contactref element="TR1" pad="B"/>
 <wire x1="105.398" y1="34.29" x2="119.38" y2="34.29" width="0.254" layer="1"/>
 </signal>
 <signal name="HEAT_CONTROL">
@@ -1325,7 +1325,7 @@ design rules under a new name.</description>
 <wire x1="45.72" y1="85.09" x2="55.88" y2="85.09" width="0.254" layer="1"/>
 </signal>
 <signal name="TEMP">
-<contactref element="U$1" pad="DQ"/>
+<contactref element="T1" pad="DQ"/>
 <contactref element="R4" pad="2"/>
 <contactref element="U1" pad="69"/>
 <wire x1="68.9229" y1="87.757" x2="69.342" y2="87.5919" width="0.1524" layer="16"/>
@@ -1461,7 +1461,7 @@ design rules under a new name.</description>
 <contactref element="C1" pad="1"/>
 <contactref element="C2" pad="1"/>
 <contactref element="X1" pad="2"/>
-<contactref element="U$2" pad="C"/>
+<contactref element="TR1" pad="C"/>
 <polygon width="0.254" layer="1">
 <vertex x="84.709" y="65.405"/>
 <vertex x="84.709" y="62.865"/>
@@ -1496,8 +1496,8 @@ design rules under a new name.</description>
 <wire x1="107.696" y1="57.338" x2="111.006" y2="66.343" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
-<contactref element="U$2" pad="E"/>
-<contactref element="U$4" pad="VDD"/>
+<contactref element="TR1" pad="E"/>
+<contactref element="H1" pad="VDD"/>
 <polygon width="0.254" layer="1">
 <vertex x="123.571" y="35.179"/>
 <vertex x="123.571" y="13.081"/>

@@ -1064,7 +1064,8 @@ DIN A3, landscape with location and doc. field</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DS18B20_TEMP_SENSOR">
+<deviceset name="DS18B20_TEMP_SENSOR" prefix="T">
+<description>Adafruit temperature sensor</description>
 <gates>
 <gate name="G$1" symbol="DS18B20_TEMP_SENSOR" x="0" y="0"/>
 </gates>
@@ -1081,7 +1082,8 @@ DIN A3, landscape with location and doc. field</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="TIP32C_TRANSISTOR">
+<deviceset name="TIP32C_TRANSISTOR" prefix="TR">
+<description>Power transistor</description>
 <gates>
 <gate name="G$1" symbol="TIP32C_TRANSISTOR" x="0" y="0"/>
 </gates>
@@ -1099,6 +1101,7 @@ DIN A3, landscape with location and doc. field</description>
 </devices>
 </deviceset>
 <deviceset name="DIODE" prefix="D">
+<description>Standard diode</description>
 <gates>
 <gate name="G$1" symbol="DIODE" x="0" y="0"/>
 </gates>
@@ -1114,7 +1117,8 @@ DIN A3, landscape with location and doc. field</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="HEATING_PAD">
+<deviceset name="HEATING_PAD" prefix="H">
+<description>Adafruit 12V heating pad</description>
 <gates>
 <gate name="G$1" symbol="HEATING_PAD" x="0" y="0"/>
 </gates>
@@ -3584,12 +3588,12 @@ chip</description>
 <part name="GND9" library="ENGI301" deviceset="GND" device=""/>
 <part name="GND10" library="ENGI301" deviceset="GND" device=""/>
 <part name="GND11" library="ENGI301" deviceset="GND" device=""/>
-<part name="U$1" library="CoffeeHeater" deviceset="DS18B20_TEMP_SENSOR" device=""/>
-<part name="U$2" library="CoffeeHeater" deviceset="TIP32C_TRANSISTOR" device=""/>
+<part name="T1" library="CoffeeHeater" deviceset="DS18B20_TEMP_SENSOR" device=""/>
+<part name="TR1" library="CoffeeHeater" deviceset="TIP32C_TRANSISTOR" device=""/>
 <part name="GND3" library="ENGI301" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="ENGI301" deviceset="VDD_5V" device=""/>
 <part name="D2" library="CoffeeHeater" deviceset="DIODE" device=""/>
-<part name="U$4" library="CoffeeHeater" deviceset="HEATING_PAD" device=""/>
+<part name="H1" library="CoffeeHeater" deviceset="HEATING_PAD" device=""/>
 <part name="GND4" library="ENGI301" deviceset="GND" device=""/>
 <part name="R4" library="ENGI301" deviceset="R_" device="R0603" value="2.2k"/>
 <part name="U3" library="microbuilder" deviceset="VREG_TPS63060/1" device="" value="TPS63060"/>
@@ -3732,8 +3736,8 @@ chip</description>
 <instance part="GND11" gate="1" x="269.24" y="127" rot="R90">
 <attribute name="VALUE" x="271.78" y="124.46" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U$1" gate="G$1" x="160.02" y="137.16"/>
-<instance part="U$2" gate="G$1" x="340.36" y="144.145"/>
+<instance part="T1" gate="G$1" x="160.02" y="137.16"/>
+<instance part="TR1" gate="G$1" x="340.36" y="144.145"/>
 <instance part="GND3" gate="1" x="163.83" y="170.18" rot="R180">
 <attribute name="VALUE" x="166.37" y="172.72" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -3741,7 +3745,7 @@ chip</description>
 <attribute name="VALUE" x="187.96" y="176.784" size="1.778" layer="96" align="center"/>
 </instance>
 <instance part="D2" gate="G$1" x="323.215" y="144.145"/>
-<instance part="U$4" gate="G$1" x="345.44" y="124.46" rot="R270">
+<instance part="H1" gate="G$1" x="345.44" y="124.46" rot="R270">
 <attribute name="NAME" x="347.98" y="127" size="1.778" layer="95" rot="R270" display="off"/>
 <attribute name="VALUE" x="347.98" y="129.54" size="1.778" layer="96" rot="R270"/>
 </instance>
@@ -3947,7 +3951,7 @@ chip</description>
 <wire x1="184.15" y1="167.64" x2="187.96" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="G$1" pin="VDD_5V"/>
 <wire x1="187.96" y1="167.64" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="VDD"/>
+<pinref part="T1" gate="G$1" pin="VDD"/>
 <wire x1="171.45" y1="160.02" x2="187.96" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="160.02" x2="187.96" y2="167.64" width="0.1524" layer="91"/>
 <junction x="187.96" y="167.64"/>
@@ -4006,7 +4010,7 @@ chip</description>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="T1" gate="G$1" pin="GND"/>
 <wire x1="163.83" y1="167.64" x2="163.83" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -4082,7 +4086,7 @@ chip</description>
 <wire x1="218.44" y1="25.4" x2="218.44" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="2"/>
+<pinref part="H1" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="345.44" y1="119.38" x2="345.44" y2="111.76" width="0.1524" layer="91"/>
 </segment>
@@ -4171,7 +4175,7 @@ chip</description>
 <net name="BASE" class="0">
 <segment>
 <pinref part="D2" gate="G$1" pin="OUT"/>
-<pinref part="U$2" gate="G$1" pin="B"/>
+<pinref part="TR1" gate="G$1" pin="B"/>
 <wire x1="332.105" y1="144.145" x2="335.28" y2="144.145" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -4189,7 +4193,7 @@ chip</description>
 </net>
 <net name="TEMP" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="DQ"/>
+<pinref part="T1" gate="G$1" pin="DQ"/>
 <wire x1="167.64" y1="160.02" x2="167.64" y2="167.64" width="0.1524" layer="91"/>
 <label x="167.64" y="160.02" size="1.778" layer="95" rot="R90"/>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -4367,15 +4371,15 @@ chip</description>
 <label x="337.82" y="223.52" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="C"/>
+<pinref part="TR1" gate="G$1" pin="C"/>
 <wire x1="345.44" y1="154.305" x2="345.44" y2="163.83" width="0.1524" layer="91"/>
 <label x="344.17" y="156.21" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="E"/>
-<pinref part="U$4" gate="G$1" pin="1"/>
+<pinref part="TR1" gate="G$1" pin="E"/>
+<pinref part="H1" gate="G$1" pin="1"/>
 <wire x1="345.44" y1="133.985" x2="345.44" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
